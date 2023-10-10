@@ -1,0 +1,25 @@
+global:
+  scrape_interval: "5s"
+  evaluation_interval: "5s"
+
+scrape_configs:
+  - job_name: "node_exporter"
+    static_configs:
+      - targets:
+          - "node_exporter:9100"
+  - job_name: "postgres_exporter"
+    static_configs:
+      - targets:
+          - "postgres_exporter:9187"
+  - job_name: "push_gateway"
+    static_configs:
+      - targets:
+          - "push_gateway:9091"
+  - job_name: "app_one"
+    static_configs:
+      - targets:
+          - "app_one:8000"
+  - job_name: "monitor"
+    static_configs:
+      - targets: 
+          - "monitor:8099"
