@@ -56,7 +56,7 @@ services:
 
   monitor:
     container_name: "monitor"
-    # command: ["python", "monitor.py", "-t", "1", "-T", "1", "-f", "2"]  
+    command: ["python", "monitor.py", "-t", "1", "-T", "1", "-f", "2"]  
     image: "monitor:latest"
     tty: true
     ports:
